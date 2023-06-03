@@ -1,0 +1,172 @@
+:root {
+	--primary: #ff7961;
+	--text-primary: #49545b;
+	--error: #ba000d;
+}
+
+body {
+	font-family: monospace;
+	background-image: linear-gradient(to bottom right, #fff, var(--primary));
+	min-height: 400px;
+	height: 100vh;
+	min-width: 600px;
+	width: 100vw;
+	margin: 0;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 16px;
+	height: 24px;
+}
+
+.title {
+	font-size: 24px;
+	font-weight: bold;
+	color: var(--text-primary);
+}
+
+.hours {
+	display: flex;
+	align-items: center;
+}
+
+.minutes {
+	grid-area: 'minutes';
+	display: flex;
+	align-items: center;
+}
+
+.seconds {
+	grid-area: 'seconds';
+	display: flex;
+	align-items: center;
+}
+
+.refresh-container {
+	display: flex;
+}
+
+.refresh-container > div {
+	padding: 0 16px;
+}
+
+.hours > div {
+	padding: 0 4px;
+}
+
+.minutes > div {
+	padding: 0 4px;
+}
+
+.seconds > div {
+	padding: 0 4px;
+}
+
+.label {
+	font-size: 16px;
+	color: var(--text-primary);
+	font-weight: bold;
+}
+
+.textfield {
+	color: var(--text-primary);
+	border: 1px solid var(--primary);
+	border-radius: 4px;
+	font-size: 16px;
+	padding: 4px;
+	width: 60px;
+}
+
+.textfield:focus {
+	outline: none;
+}
+
+.secondary-header {
+	padding: 0 16px;
+}
+
+.secondary-text {
+	font-weight: bold;
+	color: var(--text-primary);
+	font-size: 16px;
+}
+
+.start-btn {
+	background-color: var(--primary);
+	color: white;
+	border: none;
+	border-radius: 4px;
+	padding: 8px 16px;
+	font-size: 16px;
+	cursor: pointer;
+	font-family: monospace;
+}
+
+.stop-btn {
+	background-color: var(--error);
+	color: white;
+	border: none;
+	border-radius: 4px;
+	padding: 8px 16px;
+	font-size: 16px;
+	cursor: pointer;
+	font-family: monospace;
+}
+
+.tab {
+	overflow: hidden;
+	background-color: #fff;
+}
+
+.tab button {
+	background-color: inherit;
+	float: left;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 14px 16px;
+	transition: 0.3s;
+	font-size: 14px;
+	color: var(--text-primary);
+	font-family: monospace;
+}
+
+.tab button:hover {
+	background-color: var(--primary);
+	color: #fff;
+	border-radius: 4px;
+}
+
+.tab button.active {
+	background-color: var(--primary);
+	color: #fff;
+	font-weight: 600;
+	border-radius: 4px;
+}
+
+.tab-content {
+	display: none;
+	transition: 0.3s;
+}
+
+.list-item {
+	padding: 8px;
+	font-size: 14px;
+	color: var(--text-primary);
+}
+
+.active-tabs-title {
+	padding: 16px;
+	font-size: 18px;
+	color: var(--text-primary);
+}
+
+#no-active-tabs {
+	padding: 16px;
+	font-size: 14px;
+	color: var(--text-primary);
+	text-align: center;
+}

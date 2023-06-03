@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="index.css" />
+
+		<title>Page Refresher Pro</title>
+	</head>
+	<body>
+		<div id="root">
+			<div class="header">
+				<div>
+					<p class="title">Page Refresher Pro</p>
+				</div>
+
+				<div>
+					<button id="start" class="start-btn">Start</button>
+				</div>
+			</div>
+			<div class="tab">
+				<button id="time-interval-btn" class="tab-links">Time Interval</button>
+				<button id="active-tabs-btn" class="tab-links">Active Tabs</button>
+			</div>
+			<div id="time-interval" class="tab-content">
+				<div class="secondary-header">
+					<p class="secondary-text">Set your interval</p>
+				</div>
+				<div class="refresh-container">
+					<div class="hours">
+						<div>
+							<p class="label">Hours</p>
+						</div>
+						<div>
+							<input class="textfield" type="number" id="hours" name="hours" min="0" />
+						</div>
+					</div>
+					<div class="minutes">
+						<div>
+							<p class="label">Minutes</p>
+						</div>
+						<div>
+							<input class="textfield" type="number" id="minutes" name="minutes" min="0" />
+						</div>
+					</div>
+					<div class="seconds">
+						<div>
+							<p class="label">Seconds</p>
+						</div>
+						<div>
+							<input class="textfield" type="number" id="seconds" name="seconds" min="0" value="5" />
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="active-tabs" class="tab-content">
+				<div class="active-tabs-title">List of Active Tabs</div>
+				<ul id="list"></ul>
+				<div id="no-active-tabs">No active tab available</div>
+			</div>
+		</div>
+	</body>
+	<script src="content.js"></script>
+</html>

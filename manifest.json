@@ -1,0 +1,25 @@
+{
+	"name": "Page Refresher Pro",
+	"description": "Pro extension for Page Refresh",
+	"version": "1.0",
+	"manifest_version": 3,
+	"action": {
+		"default_popup": "index.html",
+		"default_title": "Open the popup"
+	},
+	"permissions": ["tabs", "storage"],
+	"background": {
+		"service_worker": "background.js"
+	},
+	"icons": {
+		"16": "page-refresher-pro.png",
+		"48": "page-refresher-pro.png",
+		"128": "page-refresher-pro.png"
+	},
+	"content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"js": ["content.js"]
+		}
+	]
+}
